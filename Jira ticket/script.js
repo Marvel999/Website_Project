@@ -57,7 +57,10 @@ addBtn.addEventListener("click", function () {
         </div>`;
 
       let ticketColorDiv = ticketDiv.querySelector(".ticket-color");
-
+      ticketDiv.addEventListener("dblclick",function(){
+        ticketDiv.remove();
+      })
+     
       ticketColorDiv.addEventListener("click", function (e) {
         // let colors = ["pink", "blue", "green", "black"];
 
@@ -78,7 +81,7 @@ addBtn.addEventListener("click", function () {
       });
 
       grid.append(ticketDiv);
-
+      
       div.remove();
     } else if(e.key === "Escape"){
         div.remove()
